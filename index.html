@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voice of Customer India · vernacular CX listening</title>
+<meta name="description" content="Transcribe and translate Indian-language customer voice notes and reviews with Sarvam AI, then tag themes, sentiment and likely NPS drivers. Export CSV. Synthetic demo included.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <div class="badge">Portfolio tool · Sarvam AI · CX</div>
+  <h1>Voice of Customer India</h1>
+  <p class="sub">Turn Indian-language reviews and short voice notes into an English CX readout: themes, sentiment, and likely NPS drivers. Live calls use your Sarvam key in the browser; without a key you can explore a labelled synthetic sample pack.</p>
+  <span id="mode-badge" class="pill demo">Demo / synthetic mode</span>
+</header>
+<main>
+  <section class="card">
+    <h2>Why this exists</h2>
+    <p>Brand and CX marketers often hear the truth first in Hindi, Tamil, Bengali or Hinglish — on WhatsApp voice notes, Play Store reviews and support tickets — not in English dashboards. This tool is a listening workflow: <strong>capture → Sarvam transcribe/translate → theme &amp; sentiment tags → CSV for the weekly CX ritual</strong>.</p>
+    <p class="note">Built as a portfolio piece for a marketer who cares about customer listening (including shop-floor and service feedback loops). It does not invent case-study results; connect your own research.</p>
+  </section>
+
+  <section class="card">
+    <h2>1. Sarvam API key (optional for text demo)</h2>
+    <div class="grid">
+      <label style="grid-column:1/-1">API subscription key
+        <input id="api-key" type="password" autocomplete="off" placeholder="From indus.sarvam.ai — stored only in localStorage">
+      </label>
+    </div>
+    <div class="row">
+      <button type="button" id="save-key">Save in this browser</button>
+      <button type="button" class="secondary" id="clear-key">Clear</button>
+    </div>
+    <p class="note" style="margin-top:.8rem">Key is sent only to <code>api.sarvam.ai</code>. Voice upload uses Saaras <code>speech-to-text</code> with <code>mode=translate</code> (REST, short clips). Text uses Mayura <code>/translate</code> into English. <a href="https://docs.sarvam.ai" target="_blank" rel="noopener">Sarvam docs</a>.</p>
+  </section>
+
+  <section class="card">
+    <h2>2. Paste reviews (one per line)</h2>
+    <div class="grid">
+      <label>Source language
+        <select id="src-lang">
+          <option value="auto">Auto-detect</option>
+          <option value="hi-IN">Hindi</option>
+          <option value="bn-IN">Bengali</option>
+          <option value="ta-IN">Tamil</option>
+          <option value="te-IN">Telugu</option>
+          <option value="mr-IN">Marathi</option>
+          <option value="gu-IN">Gujarati</option>
+          <option value="en-IN">English</option>
+        </select>
+      </label>
+      <label style="grid-column:1/-1">Reviews<textarea id="paste" placeholder="Paste Indic or English reviews, one per line"></textarea></label>
+    </div>
+    <div class="row">
+      <button type="button" id="run-paste">Analyse pasted text</button>
+      <button type="button" class="secondary" id="load-sample">Load synthetic samples</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>3. Upload a short voice note</h2>
+    <div class="drop">
+      <input id="audio" type="file" accept="audio/*,.wav,.mp3,.m4a,.ogg,.webm">
+      <p>Sarvam REST STT works best under ~30 seconds. Longer files need Sarvam’s batch API (not wired in this static demo).</p>
+    </div>
+    <div class="row"><button type="button" id="run-audio">Transcribe + analyse</button></div>
+  </section>
+
+  <section class="card">
+    <h2>4. CX readout</h2>
+    <div class="stats" id="stats"></div>
+    <div class="row">
+      <button type="button" class="secondary" id="export">Export CSV</button>
+      <span id="status" class="status" role="status"></span>
+    </div>
+    <div style="overflow:auto; margin-top:1rem">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th><th>Lang</th><th>Original</th><th>English</th><th>Sentiment</th><th>Themes</th><th>Likely NPS drivers</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>About Wispr Flow</h2>
+    <p>You can draft CX summaries by speaking them into docs with <a href="https://wisprflow.ai/" target="_blank" rel="noopener">Wispr Flow</a>. Wispr’s developer API is not publicly open without enterprise approval, so transcription of customer audio here uses <strong>Sarvam Saaras</strong> instead. That split is intentional: Wispr for the marketer’s own drafting; Sarvam for Indian-language customer audio and text.</p>
+  </section>
+</main>
+<footer>
+  <p>Built by <a href="https://github.com/yashsarkar1806-creator">Yash Sarkar</a> · MIT · <a href="https://github.com/yashsarkar1806-creator/voice-of-customer-india">Source</a> · Sample reviews are synthetic · Not affiliated with Sarvam AI or Wispr Flow.</p>
+</footer>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+{
+  "label": "SYNTHETIC sample data — fictional DTC beauty brand reviews for demo. Not real customers.",
+  "reviews": [
+    {
+      "id": "S-001",
+      "language_hint": "hi-IN",
+      "original_text": "सर्विस बहुत अच्छी थी लेकिन डिलीवरी तीन दिन लेट हो गई। प्रोडक्ट क्वालिटी ठीक है।",
+      "english_translation": "Service was very good but delivery was three days late. Product quality is fine.",
+      "source": "pasted_text"
+    },
+    {
+      "id": "S-002",
+      "language_hint": "hi-IN",
+      "original_text": "पैकेजिंग खराब थी, बॉटल लीक हो रही थी। रिफंड जल्दी मिल गया इसलिए 3 स्टार।",
+      "english_translation": "Packaging was bad, the bottle was leaking. Refund came quickly so 3 stars.",
+      "source": "pasted_text"
+    },
+    {
+      "id": "S-003",
+      "language_hint": "ta-IN",
+      "original_text": "டெலிவரி சூப்பர். கிரீம் மிகவும் நல்லா இருக்கு. மீண்டும் ஆர்டர் பண்ணுவேன்.",
+      "english_translation": "Delivery was super. The cream is very good. I will order again.",
+      "source": "pasted_text"
+    },
+    {
+      "id": "S-004",
+      "language_hint": "bn-IN",
+      "original_text": "কাস্টমার কেয়ার ফোন ধরেনি। দুইবার মেইল করেও উত্তর পাইনি।",
+      "english_translation": "Customer care did not pick up the phone. Emailed twice and still no reply.",
+      "source": "pasted_text"
+    },
+    {
+      "id": "S-005",
+      "language_hint": "mr-IN",
+      "original_text": "किंमत थोडी जास्त वाटते पण रिझल्ट दिसायला लागला. आपल्या फ्रेंडला सुचवेन.",
+      "english_translation": "Price feels a bit high but results started showing. I will recommend to a friend.",
+      "source": "pasted_text"
+    },
+    {
+      "id": "S-006",
+      "language_hint": "te-IN",
+      "original_text": "ఆర్డర్ రావడానికి ఒక వారం పట్టింది. యాప్ ట్రాకింగ్ కూడా పని చేయలేదు.",
+      "english_translation": "Order took a week to arrive. App tracking also did not work.",
+      "source": "pasted_text"
+    },
+    {
+      "id": "S-007",
+      "language_hint": "hi-IN",
+      "original_text": "WhatsApp पे सपोर्ट ने 5 मिनट में जवाब दिया। बहुत खुश हूँ, 5 स्टार।",
+      "english_translation": "Support replied on WhatsApp in 5 minutes. Very happy, 5 stars.",
+      "source": "pasted_text"
+    },
+    {
+      "id": "S-008",
+      "language_hint": "gu-IN",
+      "original_text": "પ્રોડક્ટ ઓકે છે પણ સાઈઝ ચાર્ટ ગેરમાર્ગે દોરે છે. એક સાઈઝ નાની આવી.",
+      "english_translation": "Product is okay but the size chart is misleading. One size came small.",
+      "source": "pasted_text"
+    }
+  ]
+}
